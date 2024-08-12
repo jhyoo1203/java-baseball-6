@@ -19,9 +19,9 @@
 <br>
 
 ### 🚫 예외 처리
-- [ ] 생성된 수가 3자리 수를 초과할 경우 ```NumberSizeException```
-- [ ] 생성된 수가 중복된 수일 경우 ```NumberDuplicateException```
-- [ ] 1~9 범위가 아닌 수일 경우 ```NumberRangeException```
+- [x] 생성된 수가 3자리 수를 초과할 경우 ```NumberSizeException```
+- [x] 생성된 수가 중복된 수일 경우 ```NumberDuplicateException```
+- [x] 1~9 범위가 아닌 수일 경우 ```NumberRangeException```
 
 ---
 
