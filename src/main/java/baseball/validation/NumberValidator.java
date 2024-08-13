@@ -3,12 +3,14 @@ package baseball.validation;
 import baseball.exception.NumberDuplicateException;
 import baseball.exception.NumberRangeException;
 import baseball.exception.NumberSizeException;
-import baseball.view.ErrorMessage;
 
 import java.util.HashSet;
 import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import static baseball.validation.RegexPattern.*;
+import static baseball.view.ErrorMessage.*;
 
 public class NumberValidator {
 
@@ -17,16 +19,16 @@ public class NumberValidator {
 
     public static void validateNumberSize(String number) {
         if (number.length() != 3) {
-            throw new NumberSizeException(ErrorMessage.NUMBER_SIZE.getMessage());
+            throw new NumberSizeException(ERR_NUMBER_SIZE.getMessage());
         }
     }
 
     public static void validateNumberRange(String number) {
-        Pattern pattern = Pattern.compile(RegexPattern.NUMBER_RANGE.getValue());
+        Pattern pattern = Pattern.compile(NUMBER_RANGE.getValue());
         Matcher matcher = pattern.matcher(number);
 
         if (!matcher.matches()) {
-            throw new NumberRangeException(ErrorMessage.NUMBER_RANGE.getMessage());
+            throw new NumberRangeException(ERR_NUMBER_RANGE.getMessage());
         }
     }
 
@@ -35,7 +37,7 @@ public class NumberValidator {
 
         for (Character c : number.toCharArray()) {
             if (!set.add(c)) {
-                throw new NumberDuplicateException(ErrorMessage.NUMBER_DUPLICATE.getMessage());
+                throw new NumberDuplicateException(ERR_NUMBER_DUPLICATE.getMessage());
             }
         }
     }
