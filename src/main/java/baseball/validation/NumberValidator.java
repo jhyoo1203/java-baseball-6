@@ -35,6 +35,19 @@ public class NumberValidator {
         }
     }
 
+    public static void validateNumberFormatException(String number) {
+        if (!isNumber(number)) {
+            throw new NumberFormatException(ERR_NUMBER_TYPE.getMessage());
+        }
+    }
+
+    public static boolean isNumber(String number) {
+        Pattern pattern = Pattern.compile(VALID_NUMBER.getValue());
+        Matcher matcher = pattern.matcher(number);
+
+        return matcher.matches();
+    }
+
     public static boolean isValidSize(String number) {
         return number.length() == 3;
     }
