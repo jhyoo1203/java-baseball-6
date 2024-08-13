@@ -35,7 +35,7 @@ public class NumberValidator {
         }
     }
 
-    public static void validateNumberFormatException(String number) {
+    public static void validateNumberType(String number) {
         if (!isNumber(number)) {
             throw new NumberFormatException(ERR_NUMBER_TYPE.getMessage());
         }
