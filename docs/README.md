@@ -26,15 +26,16 @@
 ---
 
 ### 📌 사용자 수 입력
-- [ ] 1에서 9까지 서로 다른 임의의 수 3개를 선택한다.
-- [ ] 사용자가 입력하는 값은 `camp.nextstep.edu.missionutils.Console`의 `readLine()`을 활용한다.
+- [x] 1에서 9까지 서로 다른 임의의 수 3개를 선택한다.
+- [x] 사용자가 입력하는 값은 `camp.nextstep.edu.missionutils.Console`의 `readLine()`을 활용한다.
 
 <br>
 
 ### 🚫 예외 처리
-- [ ] 입력한 수가 3자리 수를 초과할 경우 ```IllegalArgumentException```
-- [ ] 입력한 수가 중복된 수일 경우 ```IllegalArgumentException```
-- [ ] 입력값이 숫자가 아닐 경우 ```NumberFormatException```
+- [x] 입력한 수가 3자리 수를 초과할 경우 ```NumberSizeException```
+- [x] 입력한 수가 중복된 수일 경우 ```NumberDuplicateException```
+- [x] 1~9 범위가 아닌 수일 경우 ```NumberRangeException```
+- [x] 입력값이 숫자가 아닐 경우 ```NumberFormatException```
 
 ---
 
