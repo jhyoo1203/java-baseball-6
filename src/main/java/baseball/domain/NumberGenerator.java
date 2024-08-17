@@ -8,7 +8,7 @@ import static baseball.domain.Player.inputNumbers;
 
 public class NumberGenerator {
 
-    public static Computer createWithRandomNumbers() {
+    public static Computer createComputerNumbers() {
         List<Integer> randomNumbers = generateRandomNumbers();
         return new Computer(randomNumbers);
     }
