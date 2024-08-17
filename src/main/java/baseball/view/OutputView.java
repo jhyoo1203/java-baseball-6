@@ -9,7 +9,7 @@ public class OutputView {
         System.out.print(message.getMessage());
     }
 
-    public static void printResultMessage(ResultMessage message) {
-        System.out.println(message.getMessage());
+    public static void printResultMessage(ResultMessage result) {
+        System.out.println(result.getResult());
     }
 }

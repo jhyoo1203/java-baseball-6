@@ -7,13 +7,13 @@ public enum ResultMessage {
     BALL_STRIKE("%d볼 %d스트라이크"),
     NOTHING("낫싱");
 
-    private final String message;
+    private final String result;
 
-    ResultMessage(String message) {
-        this.message = message;
+    ResultMessage(String result) {
+        this.result = result;
     }
 
-    public String getMessage() {
-        return message;
+    public String getResult() {
+        return result;
     }
 }
