@@ -3,7 +3,7 @@ package baseball.domain;
 import java.util.List;
 
 import static baseball.validation.NumberValidator.*;
-import static camp.nextstep.edu.missionutils.Console.readLine;
+import static baseball.view.InputView.inputPlayerNumbers;
 
 public class Player {
 
@@ -14,7 +14,7 @@ public class Player {
     }
 
     public static String inputNumbers() {
-        String playerNumbers = readLine();
+        String playerNumbers = inputPlayerNumbers();
 
         validateNumberSize(playerNumbers);
         validateNumberDuplicate(playerNumbers);
