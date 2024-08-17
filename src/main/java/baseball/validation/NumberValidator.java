@@ -10,7 +10,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import static baseball.validation.RegexPattern.*;
-import static baseball.view.ErrorMessage.*;
+import static baseball.view.messages.ErrorMessage.*;
 
 public class NumberValidator {
 
