@@ -8,6 +8,7 @@ import static baseball.domain.NumberGenerator.*;
 import static baseball.domain.Result.*;
 import static baseball.view.OutputView.*;
 import static baseball.view.InputView.*;
+import static baseball.validation.NumberValidator.*;
 import static baseball.view.messages.GameMessage.*;
 
 public class Game {
@@ -36,6 +37,7 @@ public class Game {
 
     private boolean isRestart() {
         String input = inputRestartOrExit();
+        validateRestartOption(input);
         return input.equals("1");
     }
 }

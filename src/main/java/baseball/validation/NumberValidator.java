@@ -3,6 +3,7 @@ package baseball.validation;
 import baseball.exception.NumberDuplicateException;
 import baseball.exception.NumberRangeException;
 import baseball.exception.NumberSizeException;
+import baseball.exception.InvalidRestartOptionException;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -38,6 +39,12 @@ public class NumberValidator {
     public static void validateNumberType(String number) {
         if (!isNumber(number)) {
             throw new NumberFormatException(ERR_NUMBER_TYPE.getMessage());
+        }
+    }
+
+    public static void validateRestartOption(String input) {
+        if (!input.equals("1") && !input.equals("2")) {
+            throw new InvalidRestartOptionException(ERR_INVALID_RESTART_OPTION.getMessage());
         }
     }
 
